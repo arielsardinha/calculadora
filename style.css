@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.calculadora{
+    background-color: black;
+    width: 240px;
+    height: 390px;
+    border: solid 1px black;
+}
+.calculadora div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+.tela{
+    background-color: white;
+    width: 100%;
+    height: 90px;
+    margin: auto;
+}
+.botoes input{
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
+}
+.botoes input:hover{
+    background-color: rgb(253, 63, 63);
+    cursor: pointer;
+}
+.tela input{
+    width: 100px;
+    margin: auto;
+    border: none;
+}
