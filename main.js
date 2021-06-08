@@ -1,13 +1,24 @@
-const listBotoes = document.querySelectorAll('.box-botoes input')
-const tela = document.querySelectorAll('.tela input')
+const tela = document.querySelector('.tela input')
+const btn = document.querySelectorAll('.box-botoes input')
 
-function clicar(event){
-    tela[0].value += event;
-}
-function apagar(){
-    tela[0].value =''
-}
-function excluirUltimo(){
-    let a = clicar()
-    console.log(a)
-}
+console.log(btn)
+btn.forEach(item =>{
+    item.addEventListener('click',()=>{
+        if(item.value == 'C'){
+            tela.value = ''
+        }else if(item.value == '<'){
+            let valorUnit = tela.value
+            tela.value = valorUnit.substring(0,valorUnit.length -1)
+        }else if(item.value == '='){
+            if(item.value == ''){
+                tel.value = '0'
+            }else{
+                let res = eval(tela.value)
+                tela.value = res
+            }
+        }else{
+            tela.value += item.value
+            console.log(tela.value)
+        }
+    })
+})
